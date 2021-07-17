@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Recognizer</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <center>
+
+            <div class="btn btn-warning buttonTop">
+                <h3 class="heading">HAND GESTURE RECOGNITION</h3>
+                <div class="icons">
+                    <span>&#128077;</span>
+                    <span>&#128079;</span>
+                    <span>&#129304;</span>
+                    <span>&#9995;</span>
+                    <span>&#128076;</span>
+                    <span>&#128406;</span>
+                </div>
+            </div>
+
+            <br><br>
+
+            <p style="font-size: 22px; font-weight: bold; color: black;">The model is trained to identify the following
+                gestures :- 
+                <br>
+                <div class="gestures">
+                    <span>&#9996; |</span>
+                    <span>&#128076; |</span>
+                    <span>&#128079; |</span>
+                    <span>&#128080; |</span>
+                    <span>&#128077; |</span>
+                </div>
+            </p>
+
+            <div class="content">
+                <div class="webcamDiv">
+                    <label class="text text-primary snapshot">Webcam View - </label>
+                    <div class="outerCamera">
+                        <div id="camera"></div>
+                    </div>
+                    <button class="btn btn-warning snapshotBtn" onclick="takeSnapshot()">Take Snapshot</button>
+                    <br><br>
+
+                </div>
+
+                <div class="predictionDiv">
+                    <label class="text text-success snapshot">Prediction - </label>
+                    <p class="emotion_name" id="result_emotion_name"></p>
+                    <p class="emoji" id="update_emoji"></p>
+                </div>
+
+                <div class="snapshotDiv">
+                    <label class="text text-success snapshot">Snapshot - </label>
+                    <div class="outerImg">
+                        <div id="resultImg"></div>
+                    </div>
+                    <button class="btn btn-primary emotionBtn" onclick="preEmotion()">Predict Gesture</button>
+                    <br><br>
+
+                </div>
+
+            </div>
+
+        </center>
+
+    </div>
+
+</body>
+
+<script src="main.js" defer type="text/javascript"></script>
+
+</html>
